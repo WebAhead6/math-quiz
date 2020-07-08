@@ -1,6 +1,6 @@
 # Mathuiz
 
-[img]https://www.thesundaily.my/binrepository/768x540/0c54/768d432/none/11808/UCTK/math_532831_20190802120543.jpg[/img]
+![image](https://www.thesundaily.my/binrepository/768x540/0c54/768d432/none/11808/UCTK/math_532831_20190802120543.jpg)
 
 The website is a quiz game that tests your math skills across a variety of questions.
 You will solve mathematical equations and questions within a specific period of time.
