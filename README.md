@@ -6,4 +6,4 @@
 
 ##### You will solve mathematical equations and questions within a specific period of time.
 
-
+#### The user has to put their answers and when the time runs out, their score will be displayed.
