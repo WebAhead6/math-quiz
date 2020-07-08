@@ -1,108 +1,118 @@
 .question {
-    display: none;
+  display: none;
 }
 
 .timer {
-    height: 200px;
-    width: 300px;
-    padding-top: 65px;
-    background-color: #b9b7b7cc;
-    border-radius: 5%;
-    display: inline-block;
-    animation-name: timer;
-    position: relative;
-    animation-duration: 5s;
-    animation-timing-function: ease forwards;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
-    
-    }
-      
-    @keyframes timer {
-        0% {background-color:#53687E; left:0px; top:0px;}
-        50% {background-color: #53687E; left:70%; top:0px;}
-        100%  {background-color:#53687E; left:70%; top:350px;}
-  }
- .nums {
-     color: #e58a8a;
- }
-
- .bigg {
-
-    background: #495C70;
- }
-
-
-
- .form-style-4{
-	width: 100%;
-	font-size: 16px;
-	background: #495C70;
-	padding: 30px 30px 15px 30px;
-	border: 5px solid #53687E;
+  height: 200px;
+  width: 300px;
+  padding-top: 65px;
+  background-color: #53687e;
+  border-radius: 5%;
+  display: inline-block;
+  animation-name: timer;
+  position: relative;
+  animation-duration: 10s;
+  animation-timing-function: ease forwards;
+  animation-fill-mode: forwards;
 }
-.form-style-4 input[type=submit],
-.form-style-4 input[type=button],
-.form-style-4 input[type=text],
-.form-style-4 input[type=email],
-.form-style-4 textarea,
-.form-style-4 label
-{
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 16px;
-	color: #fff;
 
+@keyframes timer {
+  0% {
+    background-color: #53687e;
+    left: 0px;
+    top: 350px;
+  }
+  25% {
+    background-color: #53687e;
+    left: 70%;
+    top: 350px;
+  }
+  50% {
+    background-color: #53687e;
+    left: 70%;
+    top: 0;
+  }
+  100% {
+    background-color: #53687e;
+    left: 0;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 600px)  {
+  @keyframes timer {
+      0% {
+        background-color: #53687e;
+        left: 0px;
+        top: 0px;
+      }
+    }
+  }
+
+
+.nums {
+  color: #e58a8a;
+}
+
+.bigg {
+  background: #495c70;
+}
+
+.lead {
+  font-style: oblique;
+  font-size: 40px;
+}
+html {
+  background-color: #495c70;
+}
+
+.form-style-4 {
+  width: 100%;
+  font-size: 30px;
+  background: #495c70;
+  padding: 30px 30px 15px 30px;
+  border: 5px solid #53687e;
+}
+.form-style-4 input[type="submit"],
+.form-style-4 input[type="button"],
+.form-style-4 input[type="text"],
+.form-style-4 label {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 22px;
+  color: #fff;
 }
 .form-style-4 label {
-	display:block;
-	margin-bottom: 10px;
+  display: block;
+  margin-bottom: 10px;
 }
-.form-style-4 label > span{
-	display: inline-block;
-	float: left;
-	width: 150px;
+.form-style-4 label > span {
+  display: inline-block;
+  float: left;
+  width: 150px;
 }
-.form-style-4 input[type=text],
-.form-style-4 input[type=email] 
-{
-	background: transparent;
-	border: none;
-	border-bottom: 1px dashed #83A4C5;
-	width: 275px;
-	outline: none;
-	padding: 0px 0px 0px 0px;
-	font-style: italic;
-}
-.form-style-4 textarea{
-	font-style: italic;
-	padding: 0px 0px 0px 0px;
-	background: transparent;
-	outline: none;
-	border: none;
-	border-bottom: 1px dashed #83A4C5;
-	width: 275px;
-	overflow: hidden;
-	resize:none;
-	height:20px;
+.form-style-4 input[type="number"] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #83a4c5;
+  width: 450px;
+  outline: none;
+  padding: 0px 0px 0px 0px;
+  font-style: italic;
 }
 
-.form-style-4 textarea:focus, 
-.form-style-4 input[type=text]:focus,
-.form-style-4 input[type=email]:focus,
-.form-style-4 input[type=email] :focus
-{
-	border-bottom: 1px dashed #D9FFA9;
+.form-style-4 input[type="text"]:focus {
+  border-bottom: 1px dashed #d9ffa9;
 }
 
-.form-style-4 input[type=submit],
-.form-style-4 input[type=button]{
-	background: #576E86;
-	border: none;
-	padding: 8px 10px 8px 10px;
-	border-radius: 5px;
-	color: #A8BACE;
+.form-style-4 input[type="submit"],
+.form-style-4 input[type="button"] {
+  background: #576e86;
+  border: none;
+  padding: 8px 10px 8px 10px;
+  border-radius: 5px;
+  color: #a8bace;
 }
-.form-style-4 input[type=submit]:hover,
-.form-style-4 input[type=button]:hover{
-background: #394D61;
+.form-style-4 input[type="submit"]:hover,
+.form-style-4 input[type="button"]:hover {
+  background: #394d61;
 }
