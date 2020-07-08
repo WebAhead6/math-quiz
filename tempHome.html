@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
 
     <title>Mathuiz</title>
 </head>
@@ -22,26 +23,27 @@
     <!--result section -->
     <div class="result py-4 d-none bg-white text-center">
         <div class="container lead">
-            <p>
-                You're score is <span class="text-info display-4 p-3">0</span> on MasterMathuizan
+            <p >
+                You are<span class="text-info display-4 p-3">0%</span> MasterMathuizan
             </p>
         </div>
     </div>
     <!-- timer sectionn -->
     <div id="app" class="text-center">
-        <div class="timer d-none">
-        <label class="text-info display-4" id="minutes">10</label><label class="text-info display-4">:</label><label
-            class="text-info display-4" id="seconds">00</label>
-        </div>
-    </div>
+       
     <!-- quiz section -->
-    <div class="quiz py-4 bg-info text-center">
+    <div class="quiz py-4 bigg text-center">
         <div class="container">
+            <div class="timer d-none dot">
+                <label class="text-info display-4" id="minutes">10</label>
+                    <label class="text-info display-4">:</label>
+                <label class="text-info display-4" id="seconds">00</label>
+            </div>
             <h2 class="my-5 text-white text-center"> On to the questions! </h2>
 
-            <form class="quiz-form text-light" onsubmit="submit">
+            <form class="quiz-form text-light form-style-4" onsubmit="submit">
                 <div class="my-5">
-                    <button id="startBtn" class="btn btn-primary btn-lg">start</button>
+                    <button id="startBtn" class="btn btn-primary btn-lg form-style-4">start</button>
                     <div id="questions asnwer-field">
                         <p class="lead font-weight-normal" id="questionText"></p>
                     </div>
@@ -51,36 +53,11 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <input id="nextBTN" type="button" class="btn btn-primary btn-lg" value="Next Q!">
+                    <input id="nextBTN" type="button" class="btn  btn-primary btn-lg d-none" value="Next Q!">
                 </div>
 
 
-                <!-- <div class="my-5">
-            <p class="lead font-weight-normal">2. Example of question 2</p>
-            <div class="form-check my-2 text-white-50">
-              <label class="form-check-label">Your Answer: </label>
-              <input type="text" name="q2" />
-            </div>
-          </div>
-          <div class="my-5">
-            <p class="lead font-weight-normal">3. Example of question 3</p>
-            <div class="form-check my-2 text-white-50">
-              <label class="form-check-label">Your Answer: </label>
-              <input type="text" name="q3" />
-            </div>
-          </div>
-          <div class="my-5">
-            <p class="lead font-weight-normal">
-              4. what the favorite array method
-            </p>
-            <div class="form-check my-2 text-white-50">
-              <label class="form-check-label">Your Answer: </label>
-              <input type="text" name="q4" />
-            </div> -->
         </div>
-        <!-- <div class="text-center">
-            <input id="submitbtn" type="submit" class="btn btn-light" />
-          </div> -->
         </form>
     </div>
     </div>

@@ -1,4 +1,3 @@
-// ------------------------------------------------ defintions ------------------------------------------------------------------
 // array that holds all the correct answers
 // const correctAnswer = ["A", "B", "C", "D"];
 const nextBtn = document.querySelector("#nextBTN");
@@ -53,7 +52,7 @@ const submit = (e) => {
   result.classList.remove("d-none");
   let output = 0;
   const timer = setInterval(() => {
-    result.querySelector("span").textContent = `${output}`;
+    result.querySelector("span").textContent = `${output}%`;
     if (output === scoreCounter) {
       clearInterval(timer);
     } else {
@@ -73,8 +72,8 @@ nextBtn.classList.add('d-none');
 nextBtn.addEventListener("click", function () {
     console.log(answer.value);
   if (answer.value == questions[currentQuestion].answer) {
-    // alert('Correct Answer!');
-    scoreCounter+=5;
+    alert('Correct Answer!');
+    scoreCounter+=25;
   }
   answer.value = "";
   currentQuestion++;
@@ -137,6 +136,7 @@ function pad(val) {
 function hideTimer() {
   minutesLabel.classList.add("d-none");
   secondsLabel.classList.add("d-none");
+  timer.classList.add('d-none');
   minutesLabel.nextElementSibling.classList.add("d-none");
 }
 //-------------------------------------------------------- TIMER SECTION END -----------------------------------------------
