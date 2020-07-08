@@ -36,7 +36,7 @@ nextBtn.addEventListener("click", function () {
   if (currentQuestion == questions.length) {
     question.style.display = "none";
     score.textContent = `you got ` + scoreCounter + ` score`;
-    console.log(message)
+    console.log(message);
     if (score < 2) {
       message.textContent = messageText[0];
     } else if (score > 2 && score < 5) {
