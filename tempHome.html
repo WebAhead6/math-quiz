@@ -23,22 +23,23 @@
     <!--result section -->
     <div class="result py-4 d-none bg-white text-center">
         <div class="container lead">
-            <p >
-                You are<span class="text-info display-4 p-3">0%</span> MasterMathuizan
+            <p>
+                You're score is <span class="text-info display-4 p-3">0</span> on ya Master Mathuizan
             </p>
         </div>
     </div>
-    <!-- timer sectionn -->
-    <div id="app" class="text-center">
-       
     <!-- quiz section -->
     <div class="quiz py-4 bigg text-center">
         <div class="container">
+            <!-- timer sectionn -->
+
             <div class="timer d-none">
                 <label class="text-info display-4" id="minutes">10</label>
                     <label class="text-info display-4">:</label>
                 <label class="text-info display-4" id="seconds">00</label>
             </div>
+
+            <!-- END timer sectionn -->
             <h2 class="my-5 text-white text-center"> On to the questions! </h2>
 
             <form class="quiz-form text-light form-style-4" onsubmit="submit">
@@ -53,10 +54,10 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <input id="nextBTN" type="button" class="btn btn-primary btn-lg" value="➡️">
+                    <input id="nextBTN" type="button" class="btn btn-primary btn-lg form-style-4" value="Next Question!">
                 </div>
-                <button id="resetBtn" class="d-none" onclick="myButton()">reset</button>
-
+                <button id="resetBtn" class="d-none btn btn-primary btn-lg form-style-4" onclick="playAgainButton()">Play again!</button>
+                
 
         </div>
         </form>
