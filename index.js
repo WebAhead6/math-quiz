@@ -15,7 +15,15 @@ let messageText = [
 ];
 
 let questions = [
+  { question: "15-1(12/4+1)", answer: "10" },
+  { question: "3+7÷2", answer: "17" },
+  { question: "3-5*2", answer: "-7" },
+  { question: "6/2(1+2)", answer: "9" },
   { question: "5*2", answer: "10" },
+  { question: "3+3x3-3+3", answer: "12" },
+  { question: "10+10*0+10", answer: "20" },
+  { question: "8-1x0+2÷2", answer: "9" },
+  { question: "A-3+3x0", answer: "8" },
   { question: "3+7*2", answer: "17" },
   { question: "3-5*2", answer: "-7" },
   { question: "6/2(1+2)", answer: "9" },
