@@ -3,8 +3,9 @@
 const nextBtn = document.querySelector("#nextBTN");
 const answer = document.querySelector("#answer");
 const startBtn = document.querySelector("#startBtn");
+var interval;
 let answerfield = document.querySelector('.asnwer-field');
-let timer = document.querySelector('.timer');
+let timerClock = document.querySelector('.timer');
 let currentQuestion = 0;
 let scoreCounter = 0;
 let messageText = [
@@ -79,7 +80,10 @@ nextBtn.addEventListener("click", function () {
   currentQuestion++;
   if (currentQuestion == questions.length) {
     //   question.style.display = "none";
+    clearInterval(interval);
+    hideTimer();
     submit();
+    
   }
 
   questionText.textContent = questions[currentQuestion].question;
@@ -92,8 +96,8 @@ nextBtn.addEventListener("click", function () {
     answerfield.classList.remove('d-none');
 
     questionText.textContent = questions[currentQuestion].question;
-    var interval = setInterval(setTime, 1000);
-    timer.classList.remove('d-none');
+    interval = setInterval(setTime, 1000);
+    timerClock.classList.remove('d-none');
 
   });
 
@@ -102,7 +106,7 @@ nextBtn.addEventListener("click", function () {
 // --------------------------------------------------------------- TIMER SECTION --------------------------------------------------
 var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
-var totalSeconds = 600;
+var totalSeconds = 5;
 
 function setTime() {
   totalSeconds--;
@@ -115,6 +119,7 @@ function setTime() {
     clearInterval(interval);
     inputs.forEach((e) => {
       if (e.classList.contains("btn-light")) {
+          e.disabled = false;
       } else {
         e.disabled = true;
       }
@@ -134,10 +139,11 @@ function pad(val) {
 }
 
 function hideTimer() {
-  minutesLabel.classList.add("d-none");
-  secondsLabel.classList.add("d-none");
-  timer.classList.add('d-none');
-  minutesLabel.nextElementSibling.classList.add("d-none");
+//   minutesLabel.classList.add("d-none");
+//   secondsLabel.classList.add("d-none");
+console.log(timerClock);
+  timerClock.classList.add('d-none');
+//   minutesLabel.nextElementSibling.classList.add("d-none");
 }
 //-------------------------------------------------------- TIMER SECTION END -----------------------------------------------
 
