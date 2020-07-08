@@ -106,7 +106,7 @@ nextBtn.addEventListener("click", function () {
 // --------------------------------------------------------------- TIMER SECTION --------------------------------------------------
 var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
-var totalSeconds = 5;
+var totalSeconds = 30;
 
 function setTime() {
   totalSeconds--;
