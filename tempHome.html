@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css" />
 
     <title>Mathuiz</title>
@@ -34,14 +35,15 @@
             <!-- timer sectionn -->
 
             <div class="timer d-none">
-                <label class="text-info display-4" id="minutes">10</label>
+                <label class="text-info display-4" id="minutes">01</label>
                     <label class="text-info display-4">:</label>
-                <label class="text-info display-4" id="seconds">00</label>
+                <label class="text-info display-4" id="seconds">30</label>
             </div>
 
             <!-- END timer sectionn -->
-            <h2 class="my-5 text-white text-center"> On to the questions! </h2>
-
+            <span>
+                <span class="my-5 text-white text-center message"> </span>
+            </span>
             <form class="quiz-form text-light form-style-4" onsubmit="submit">
                 <div class="my-5">
                     <button id="startBtn" class="btn btn-primary btn-lg form-style-4">Start</button>

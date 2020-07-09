@@ -7,12 +7,14 @@ const resetBtn=document.querySelector("#resetBtn")
 var interval;
 let answerfield = document.querySelector('.asnwer-field');
 let timerClock = document.querySelector('.timer');
+let message = document.querySelector('.message');
+
 let currentQuestion = 0;
 let scoreCounter = 0;
 let messageText = [
   "you are really braindead",
   "you will be accepted in society",
-  "nice",
+  "Nice!",
 ];
 
 let questions = [
@@ -56,6 +58,15 @@ const submit = (e) => {
   }, 10);
 
   hideTimer();
+  message.classList.add("effect");
+  if (scoreCounter < 5) {
+    message.innerHTML= messageText[0];
+    
+  } else if (scoreCounter >= 5 && scoreCounter < 15) {
+    message.innerHTML = messageText[1];
+  } else {
+    message.innerHTML = messageText[2];
+  }
 };
 form.onsubmit = submit;
 
@@ -109,6 +120,8 @@ function playAgainButton() {
   nextBtn.classList.add("d-none");
   resetBtn.classList.add("d-none");
   result.classList.remove("d-none");
+  location.reload();
+  return false; 
 }
   
 // --------------------------------------------------------------- SUBMISSION LOGIC END! ------------------------------------------
@@ -116,7 +129,7 @@ function playAgainButton() {
 // --------------------------------------------------------------- TIMER SECTION --------------------------------------------------
 var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
-var totalSeconds = 30;
+var totalSeconds = 90;
 
 function setTime() {
   totalSeconds--;
@@ -132,6 +145,11 @@ function setTime() {
     //     e.disabled = true;
     //   }
     // });
+    nextBtn.classList.add("d-none")
+    answerfield.classList.add("d-none")
+    questionText.classList.add("d-none")
+    resetBtn.classList.remove("d-none")
+
     submit();
     hideTimer();
   }
